@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Starfinder Cheat Sheets - Conditions</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/8ada09e1e0.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="actions-in-combat.html" >Actions In Combat</a>
+            <a href="conditions.html">Conditions</a>
+            <a href="death-flowchart.html">Death Flowchart</a>
+            <a href="skill-actions.html">Skill Actions</a>
+            <a href="#" style="text-decoration: line-through;">Spell List</a>
+            <a href="starship-combat.html">Starship Combat</a>
+            <a href="#" style="text-decoration: line-through;">Initiative Tracker</a>
+          </div>
+          
+          <!-- Use any element to open the sidenav -->
+          <i class="fa fa-bars" onclick="openNav()"></i>
+          <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+          <!--<div id="main"> -->
+        
+        <!--    
+        <div class="img-zoom-conatiner">
+            <img id="myImage" src="images/starship-combat-sheet.png" alt="" width="300px" height="240px">
+        </div> -->
+        
+        <!-- Trigger the Modal -->
+        <img id="myImg" src="images/starship-combat-sheet.png" alt="Starship Combat Sheet" style="width:100%; max-width:800px; margin-left: 26%; margin-top: 15%">
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- The Close Button -->
+            <span class="close">&times;</span>
+
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="img01">
+
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
+        
+          
+          <script>
+            function openNav() {
+              document.getElementById("mySidenav").style.width = "200px";
+              document.getElementById("main").style.marginLeft = "200px";
+              }
+              function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+              document.getElementById("main").style.marginLeft = "0";
+              }
+            // Get the modal
+            var modal = document.getElementById("myModal");
+
+            // Get the image and insert it inside the modal - use its "alt" text as a caption
+            var img = document.getElementById("myImg");
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+            img.onclick = function(){
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+            }
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+            modal.style.display = "none";
+            }
+          </script>
+    </body>
+
+</html>
